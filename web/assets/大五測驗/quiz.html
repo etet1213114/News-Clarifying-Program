@@ -1,0 +1,57 @@
+<html lang="zh-Hant">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personality Test</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/quiz.css"> <!-- ANIMATE CSS -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> <!-- FONTAWESOME -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"><!-- GOOGLE FONT -->
+	<!-- CUSTOM --> <!-- link rel="stylesheet" type="text/css" href="css/main.css" -->
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+	<script src="js/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container text-center">
+		<h1>大五人格測驗</h1>
+	</div>
+	
+	<div class="container text-left">
+		<p>五大人格特質是現代心理學中，描述最高組織層次的五面向特質，這五大特質構成了人的主要個性區隔，分別是：開放性、審慎嚴謹性、外向性、親和性、神經質。其中，我們將透過此測驗來做出適合每個使用者的個人化介面。  </p>
+	</div>
+
+	<div class="container text-left">
+		<ul id="quiz" class="list-group">
+		</ul>
+		<p id="reminder"></p>
+	</div>
+
+	<div class="container text-left hide reminder">
+		<p id="reminder"></p>
+	</div>
+	
+	<div class="container text-center hide results" id="myDiv" >
+		<!--<p id="myDiv"></p>-->
+	</div>
+
+	<div class="container text-left results hide">
+		<p id="results"></p>
+	</div>
+
+	<div class="container text-center bottom">
+		<button id="submit-btn" class="btn btn-primary btn-lg">送出</button>
+		<button id="retake-btn" class="hide btn btn-primary btn-lg">再做一次測驗</button>
+		<button id="home-btn" class="hide btn btn-default btn-lg">回主頁</button>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/quiz.js"></script>
+</body>
+</html>

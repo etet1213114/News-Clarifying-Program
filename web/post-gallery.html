@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>個別新聞頁面</title>
+
+    <!-- Bootstrap, Font Awesome, Aminate, Owl Carausel, Normalize CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/owl.theme.default.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/slicknav.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Site CSS -->
+
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <!-- Modernizr JS -->
+    <script src="assets/js/modernizr-3.5.0.min.js"></script>
+
+    <!--favincon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <style type="text/css">
+        .alert {
+            //alert start
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .closebtn:hover {
+            color: black;
+        }
+        
+        div {}
+        
+        .info {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 25px 6px 6px 6px;
+        }
+        
+        .news {
+            border-left: 6px;
+        }
+        
+        button {
+            width: 80px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #23c2c2;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .submit {
+            cursor: pointer;
+        }
+        
+        .insert {
+            cursor: pointer;
+        }
+        
+        .reset {
+            border: medium none;
+            float: right;
+            cursor: pointer;
+            width: 108px;
+            height: 48px;
+        }
+    </style>
+</head>
+
+<body onload="ShowDate()">
+    <div class="spinner-cover">
+        <div class="spinner-inner">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="top_bar margin-15">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 time">
+
+                                <i class="fa fa-clock-o"></i>
+                                <div id="showbox"> </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 social">
+                                <div id="userlogin" style="display: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 header">
+                            <h1 class="logo"><a href="home-grid.html">News Clarifying Program</a></h1>
+                            <p class="tagline">Good Place & Better News</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-nav section_margin">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-12 main_nav_cover" id="nav">
+                                <ul id="main-menu">
+                                    <li><a href="home-grid.html">首頁</a></li>
+                                    <li><a href="category-list.html?category=娛樂">娛樂</a></li>
+                                    <li><a href="category-list.html?category=政治">政治</a></li>
+                                    <li><a href="category-list.html?category=社會">社會</a></li>
+                                    <li><a href="category-list.html?category=國際">國際</a></li>
+                                    <li><a href="category-list.html?category=財經">財經</a></li>
+                                    <li><a href="category-list.html?category=生活">生活</a></li>
+                                    <li><a href="category-list.html?category=運動">運動</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="primary margin-15">
+                        <div class="row">
+
+                            <div class="col-md-8">
+
+                                <div class='alert'>
+                                    <span class="closebtn" onclick="this.parentElement.style.display='none';">
+						    		<div id="adultbeta" ></div>
+						    	</span>
+                                </div>
+                                <!--警示燈-->
+
+                                <article class="section_margin">
+
+                                    <div class="post-content">
+                                        <input class="favorite_css" type="button" value="收藏" style=" width: 80px; height: 45px;" id="favorite_id">
+                                        <input type="button" onclick="javascript:location.href='http://120.126.19.100/page-author.html'" value="收藏列表" style="width: 120px; height: 50px ;float:right;" id="favorite_id2">
+                                        <br>
+                                        <br>
+
+                                        <div id="title"> </div>
+                                        <!--標題-->
+                                        <div>
+                                            <div class="news"></div>
+                                            <div class="info">
+                                                <!--新聞標籤-->
+                                                <h3><strong>◎新聞標籤!</strong></h3>
+                                                <div id="info1"></div>
+                                                <!--待改-->
+                                                &nbsp<input type="text" name="where" id="where" style="font-size:12pt;height:20px;width:100px;">
+                                                <input type="submit" class="insert" id="insert1" value="輸入">
+                                                <div id="whinsert"></div>
+
+                                                <div id="info2"></div>
+                                                &nbsp<input type="text" name="author" id="author" style="font-size:12pt;height:20px;width:100px;">
+                                                <input type="submit" class="insert" id="insert2" value="輸入">
+                                                <div id="auinsert"></div>
+
+                                                <div id="info3"></div>
+                                                &nbsp<input type="text" name="source" id="source" style="font-size:12pt;height:20px;width:100px;">
+                                                <input type="submit" class="insert" id="insert3" value="輸入">
+                                                <div id="srcinsert"></div>
+
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div id="thediv" style="display:block" class="single-comment">
+                                            <section id="comments">
+                                                <h4 class="single-comment-title">評論區</h4>
+                                                <div class="comments-inner clr">
+                                                    <div class="comments-title">
+                                                        <p>歡迎留言討論</p>
+                                                    </div>
+                                                    <div><a href="comment.php">觀看留言</a></div>
+
+                                                    <ol class="commentlist">
+                                                        <div id=testmessageboard></div>
+
+                                                        <!--  <li id="li-comment-4">
+													  <article class="comment even thread-even depth-1 clr" id="comment-4">
+													  
+														 <div class="comment-author vcard"> <img width="60" height="80" src="assets/images/post-author-avatar.jpg" alt=""></div>
+														 <div class="comment-details clr ">
+															<header class="comment-meta"> <strong class="fn"> Steven Jobs </strong> <span class="comment-date">July 4, 2017 7:25 am </span></header>
+															<div class="comment-content entry clr">
+															   <p id="testmessageboard"></p>
+															</div>
+															
+														 </div>
+													  </article>
+													  
+												   </li>
+												   <li id="li-comment-5">
+													  <article class="comment even thread-odd thread-alt depth-1 clr" id="comment-5">
+														 <div class="comment-author vcard"> <img width="60" height="60" src="assets/images/post-author-avatar.jpg" alt=""></div>
+														 <div class="comment-details clr ">
+															<header class="comment-meta"> <strong class="fn"> Steven Jobs </strong> <span class="comment-date">July 4, 2017 7:25 am </span></header>
+															<div class="comment-content entry clr">
+															   <p>jeepers unscrupulous anteater attentive noiseless put less greyhound prior stiff ferret unbearably cracked oh.</p>
+															</div>
+															
+														 </div>
+													  </article>
+												   </li>
+												   <li id="li-comment-85">
+													  <article class="comment byuser comment-author-spadmin bypostauthor odd alt thread-even depth-1 clr" id="comment-85">
+														 <div class="comment-author vcard"><img width="60" height="60" src="assets/images/post-author-avatar.jpg" alt=""></div>
+														 <div class="comment-details clr ">
+															<header class="comment-meta"> <strong class="fn"> Steven Jobs <span class="author-badge"></span> </strong> <span class="comment-date">May 10, 2018 2:41 am </span></header>
+															<div class="comment-content entry clr">
+															   <p>So sparing more goose caribou wailed went conveniently burned the the the and that save that adroit gosh and sparing armadillo grew some overtook that magnificently that</p>
+															</div>
+															
+														 </div>
+													  </article>
+												   </li>
+												   <li id="li-comment-86">
+													  <article class="comment byuser comment-author-spadmin bypostauthor even thread-odd thread-alt depth-1 clr" id="comment-86">
+														 <div class="comment-author vcard"><img width="60" height="60" src="assets/images/post-author-avatar.jpg" alt=""></div>
+														 <div class="comment-details clr ">
+															<header class="comment-meta"> <strong class="fn"> Steven Jobs <span class="author-badge"></span> </strong> <span class="comment-date">May 10, 2018 2:42 am </span></header>
+															<div class="comment-content entry clr">
+															   <p>Circuitous gull and messily squirrel on that banally assenting nobly some much rakishly goodness that the darn abject hello left because unaccountably spluttered unlike a aurally since contritely thanks</p>
+															</div>
+															<div class="reply comment-reply-link-div"><a aria-label="Reply to spadmin" href="#respond" class="comment-reply-link" rel="nofollow">Reply</a></div>
+														 </div>
+													  </article>
+												   </li> -->
+                                                    </ol>
+                                                    <!--comment list-->
+                                                    <nav role="navigation" class="comment-navigation clr">
+                                                        <div class="nav-previous span_1_of	_2 col col-1"></div>
+                                                        <div class="nav-next span_1_of_2 col"> <a href="#comments">Newer Comments →</a></div>
+                                                    </nav>
+                                                    <!--comment nav-->
+
+                                                    <!-- 下面是寫評論-->
+                                                    <div class="comment-respond" id="respond">
+                                                        <h3 class="comment-reply-title" id="reply-title">分享您的評論 <small><a href="#respond" id="cancel-comment-reply-link" rel="nofollow"><i class="fa fa-times"></i></a></small></h3>
+                                                        <form method="POST" action="" enctype="text/plain" class="comment-form" id="commentform">
+
+                                                            <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span></p>
+                                                            <div class="row">
+                                                                <div class="comment-form-author col-sm-12 col-md-6"> <label for="author">Name (optional)</label> <input type="text" size="30" value="" placeholder="Your name *" name="author" id="Name"></div>
+                                                                <div class="comment-form-email col-sm-12 col-md-6"> <label for="email">Email (optional)</label> <input type="email" size="30" value="" placeholder="Email *" name="email" id="email"></div>
+                                                            </div>
+                                                            <p class="comment-form-comment"><label for="comment">Comment</label><textarea aria-required="true" placeholder="Your Comment" rows="8" cols="45" name="comment" id="comment"></textarea></p>
+
+                                                            <p class="form-submit"><input type="submit" value="送出評論" class="submit" id="submit" name="submit" onClick="window.location.reload();">
+                                                                <p class="form-reset"><input type="reset" value="清除表單" class="reset" id="reset" name="reset"></p>
+                                                        </form>
+
+
+                                                    </div>
+                                                    <!--comment form-->
+
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <!--Start Sidebar-->
+                            <aside class="col-md-4 sidebar_right">
+                                <div class="sidebar-widget animate-box">
+                                    <div class="widget-title-cover">
+                                        <h4 class="widget-title"><span>Most Popular</span></h4>
+                                    </div>
+                                    <div class="latest_style_1">
+                                        <div class="latest_style_1_item">
+                                            <span class="item-count vertical-align">1.</span>
+                                            <div id="home_title8" class="alith_post_title_small"></div>
+                                        </div>
+                                        <div class="latest_style_1_item">
+                                            <span class="item-count vertical-align">2.</span>
+                                            <div id="home_title9" class="alith_post_title_small"></div>
+                                        </div>
+                                        <div class="latest_style_1_item">
+                                            <span class="item-count vertical-align">3.</span>
+                                            <div id="home_title10" class="alith_post_title_small"></div>
+                                        </div>
+                                        <div class="latest_style_1_item">
+                                            <span class="item-count vertical-align">4.</span>
+                                            <div id="home_title11" class="alith_post_title_small"></div>
+                                        </div>
+                                        <div class="latest_style_1_item">
+                                            <span class="item-count vertical-align">5.</span>
+                                            <div id="home_title12" class="alith_post_title_small"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--.sidebar-widget-->
+
+                                <div class="sidebar-widget animate-box">
+                                    <div class="widget-title-cover">
+                                        <h4 class="widget-title"><span>Trending</span></h4>
+                                    </div>
+                                    <div class="latest_style_2">
+                                        <div class="latest_style_2_item_first">
+                                            <figure class="alith_post_thumb_big"></figure>
+                                            <h3 class="alith_post_title"></h3>
+                                        </div>
+                                        <div class="latest_style_2_item">
+                                            <h3 id="home_title13" class="alith_post_title"></h3>
+                                        </div>
+                                        <div class="latest_style_2_item">
+                                            <h3 id="home_title14" class="alith_post_title"></h3>
+                                        </div>
+                                        <div class="latest_style_2_item">
+                                            <h3 id="home_title15" class="alith_post_title"></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--.sidebar-widget-->
+
+                                <!--.sidebar-widget-->
+
+                            </aside>
+                            <!--End Sidebar-->
+                        </div>
+                    </div>
+                    <!--.primary-->
+
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="container animate-box">
+                    <div class="bottom margin-15">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                                <div class="sidebar-widget">
+                                    <div class="widget-title-cover">
+                                        <h4 class="widget-title"><span>Latest</span></h4>
+                                    </div>
+                                    <div class="latest_style_2">
+                                        <div class="latest_style_2_item">
+                                            <figure class="alith_news_img"></figure>
+                                            <h3 id="home_title16" class="alith_post_title"></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                <div class="sidebar-widget">
+                                    <div class="widget-title-cover">
+                                        <h4 class="widget-title"><span>Categories</span></h4>
+                                    </div>
+                                    <ul class="bottom_menu">
+                                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; 娛樂</a></li>
+                                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; 政治</a></li>
+                                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; 社會</a></li>
+                                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; 國際</a></li>
+                                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; 財經</a></li>
+                                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; 生活</a></li>
+                                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; 運動</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                <div class="sidebar-widget">
+                                    <div class="widget-title-cover">
+                                        <h4 class="widget-title"><span>Recommended</span></h4>
+                                    </div>
+                                    <ul class="alith-instagram-grid-widget alith-clr alith-row alith-gap-10">
+                                        <li class="wow fadeInUp alith-col-nr alith-clr alith-col-3 animated">
+                                            <a class="" target="_blank" href="https://islander.cc/?searchType=event&time=2020-12-02&timeType=date">
+                                                <img class="" title="" alt="" src="assets/images/島民衛星.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="wow fadeInUp alith-col-nr alith-clr alith-col-3 animated">
+                                            <a class="" target="_blank" href="https://www.bnext.com.tw/">
+                                                <img class="" title="" alt="" src="assets/images/數位時代.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="wow fadeInUp alith-col-nr alith-clr alith-col-3 animated">
+                                            <a class="" target="_blank" href="https://www.youtube.com/channel/UCiwt1aanVMoPYUt_CQYCPQg">
+                                                <img class="" title="" alt="" src="assets/images/文茜.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="wow fadeInUp alith-col-nr alith-clr alith-col-3 animated">
+                                            <a class="" target="_blank" href="https://www.youtube.com/channel/UC7_BFMWW2l5aXkx33ml0qOw">
+                                                <img class="" title="" alt="" src="assets/images/李四端.png">
+                                            </a>
+                                        </li>
+                                        <li class="wow fadeInUp alith-col-nr alith-clr alith-col-3 animated">
+                                            <a class="" target="_blank" href="https://global.udn.com/global_vision/index">
+                                                <img class="" title="" alt="" src="assets/images/轉角國際.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="wow fadeInUp alith-col-nr alith-clr alith-col-3 animated">
+                                            <a class="" target="_blank" href="https://newslab.pts.org.tw/">
+                                                <img class="" title="" alt="" src="assets/images/p.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="wow fadeInUp alith-col-nr alith-clr alith-col-3 animated">
+                                            <a class="" target="_blank" href="https://www.bbc.com/zhongwen/trad">
+                                                <img class="" title="" alt="" src="assets/images/bbc.jfif">
+                                            </a>
+                                        </li>
+                                        <li class="wow fadeInUp alith-col-nr alith-clr alith-col-3 animated">
+                                            <a class="" target="_blank" href="https://www.nytimes.com/">
+                                                <img class="" title="" alt="" src="assets/images/newyorktimes.png">
+                                            </a>
+                                        </li>
+                                        <li class="wow fadeInUp alith-col-nr alith-clr alith-col-3 animated">
+                                            <a class="" target="_blank" href="https://news.pts.org.tw/">
+                                                <img class="" title="" alt="" src="assets/images/pts.jpg">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--.row-->
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid alith_footer_right_reserved">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 bottom-logo">
+                            <h1 class="logo"><a href="index.html">News Clarifying Program</a></h1>
+
+                        </div>
+                        <div class="col-12 col-md-12 coppyright">
+                            <p>© Copyright 2018, All rights reserved. Design by <a href="https://alithemes.com" title="AliTheme">Alithemes.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gototop js-top">
+                <a href="#" class="js-gotop"><span>Take Me Top</span></a>
+            </div>
+        </div>
+        <!--page-content-wrapper-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--x-->
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <script src="assets/js/jquery.slicknav.min.js"></script>
+        <!--?-->
+        <script src="assets/js/masonry.pkgd.min.js"></script>
+        <script src="assets/js/useridlogin.js"></script>
+        <!-- Main -->
+        <script src="assets/js/messageboard.js"></script>
+        <script src="assets/js/postid.js"></script>
+        <script src="assets/js/home-hide.js"></script>
+        <script src="assets/js/main.js"></script>
+        <!--?-->
+        <script src="assets/js/title.js"></script>
+        <script src="assets/js/Date.js"></script>
+        <script src="assets/js/adultbeta.js"></script>
+        <script src="assets/js/smart-sticky.js"></script>
+        <script src="assets/js/theia-sticky-sidebar.js"></script>
+        <script src="assets/js/home_title8.js"></script>
+        <script src="assets/js/home_title9.js"></script>
+        <script src="assets/js/home_title10.js"></script>
+        <script src="assets/js/home_title11.js"></script>
+        <script src="assets/js/home_title12.js"></script>
+        <script src="assets/js/home_title13.js"></script>
+        <script src="assets/js/home_title14.js"></script>
+        <script src="assets/js/home_title15.js"></script>
+        <script src="assets/js/home_title16.js"></script>
+        <script src="assets/js/newslabel.js"></script>
+    </div>
+    <!--#wrapper-->
+</body>
+
+</html>
